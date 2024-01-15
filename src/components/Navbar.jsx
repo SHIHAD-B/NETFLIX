@@ -2,8 +2,9 @@ import { Link } from "react-router-dom"
 import { useContext } from "react"
 import AuthContext from "../context/AuthContext"
 import { useNavigate } from "react-router-dom"
+import logo from '../assets/logos/Netflix_Logo_CMYK.png'
 export const Navbar = () => {
-    const logo="./src/assets/logos/Netflix_Logo_CMYK.png"
+
     const { user, logOut } = useContext(AuthContext)
     const navigate = useNavigate()
     const handleLogout = async () => {
