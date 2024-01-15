@@ -3,6 +3,7 @@ import { useContext } from "react"
 import AuthContext from "../context/AuthContext"
 import { useNavigate } from "react-router-dom"
 export const Navbar = () => {
+    const logo="./src/assets/logos/Netflix_Logo_CMYK.png"
     const { user, logOut } = useContext(AuthContext)
     const navigate = useNavigate()
     const handleLogout = async () => {
@@ -17,7 +18,7 @@ export const Navbar = () => {
     return (
         <div className="flex items-center justify-between p-4 z-[100] w-full top-0 left-0 absolute">
             <Link to='/'>
-                <img className="w-32 md:w-44" src="./src/assets/logos/Netflix_Logo_CMYK.png" alt="" />
+                <img className="w-32 md:w-44" src={logo}alt="" />
             </Link>
             {user?.email ? <div>
                 <Link to='/account'>
